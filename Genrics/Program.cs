@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Please Enter Any Below Option");
-            Console.WriteLine("1.Finding Max Integer\n2.Finding Max Float\n3.Finding Max String");
+            Console.WriteLine("1.Finding Max Integer\n2.Finding Max Float\n3.Finding Max String\n4.Genric");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -39,6 +39,11 @@
                     Console.WriteLine("Enter Float Num3");
                     string st3 = Console.ReadLine();
                     FindingMaxString.FindingMaxSt(st1, st2, st3);
+                    break;
+                case 4:
+
+
+                    MyGenrics.GetMax<int>(10,15,25);
                     break;
 
             }
