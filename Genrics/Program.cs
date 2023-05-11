@@ -1,11 +1,13 @@
-﻿namespace Genrics
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace Genrics
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Please Enter Any Below Option");
-            Console.WriteLine("1.Finding Max Integer\n2.Finding Max Float\n3.Finding Max String\n4.Genric");
+            Console.WriteLine("1.Finding Max Integer\n2.Finding Max Float\n3.Finding Max String\n4.GenricMethod\n5.GenricClass");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -43,17 +45,16 @@
                 case 4:
 
 
-                    MyGenrics.GetMax<int>(10,15,25);
+                    //MyGenrics.GetMax<int>(10, 15, 25);
+                    //MyGenrics.GetMax<string>("ram", "siva", "hari");
+                    break;
+                case 5:
+                    GenricMaximum<int> generic = new GenricMaximum<int>(10, 15, 20);
+                    generic.MaxMethod();
                     break;
 
             }
-            
-                
-               
-             
-           
-            
-        }
+        }   
    
     }
 }
